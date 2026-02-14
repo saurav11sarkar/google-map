@@ -34,7 +34,7 @@ export default function MapWithApartments() {
 
   return (
     <div className="grid md:grid-cols-3 gap-6 p-6 text-black">
-      {/* 🔹 LEFT: Apartment List */}
+      {/* LEFT: Apartment List */}
       <div className="space-y-4">
         <h2 className="text-xl font-bold">Apartments</h2>
 
@@ -58,7 +58,7 @@ export default function MapWithApartments() {
         })}
       </div>
 
-      {/* 🔹 RIGHT: Map */}
+      {/* RIGHT: Map */}
       <div className="md:col-span-2 rounded-2xl overflow-hidden shadow-lg">
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
           {apartments.map((apt) => (
