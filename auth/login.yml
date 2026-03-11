@@ -8,57 +8,33 @@ http:
   url: "{{base_url}}/auth/login"
   body:
     type: json
-    data: "// {\r
+    data: |-
+      {
+          "email": "user@gmail.com",
+          "password": "123456"
+      }
 
-      //     \"email\": \"user@gmail.com\",\r
 
-      //     \"password\": \"123456\"\r
+      // {
+      //     "email": "vendor@gmail.com",
+      //     "password": "StrongPass123!"
+      // }
 
-      // }\r
+      // {
+      //     "email": "admin@gmail.com",
+      //     "password": "StrongPass123!"
+      // }
 
-      \r
+      // {
+      //     "email": "vendor@gmail.com",
+      //     "password": "StrongPass123!"
+      // }
 
-      \r
 
-      // {\r
-
-      //     \"email\": \"vendor@gmail.com\",\r
-
-      //     \"password\": \"StrongPass123!\"\r
-
-      // }\r
-
-      \r
-
-      // {\r
-
-      //     \"email\": \"admin@gmail.com\",\r
-
-      //     \"password\": \"StrongPass123!\"\r
-
-      // }\r
-
-      \r
-
-      // {\r
-
-      //     \"email\": \"vendor@gmail.com\",\r
-
-      //     \"password\": \"StrongPass123!\"\r
-
-      // }\r
-
-      \r
-
-      \r
-
-      {\r
-
-      \    \"email\": \"agent@gmail.com\",\r
-
-      \    \"password\": \"StrongPass123!\"\r
-
-      }"
+      // {
+      //     "email": "agent@gmail.com",
+      //     "password": "StrongPass123!"
+      // }
   auth: inherit
 
 settings:
