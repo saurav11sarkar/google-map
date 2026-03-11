@@ -1,0 +1,166 @@
+info:
+  name: create calender
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/calender/69a5245c98b0908cb6ade7d7"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"firstName\": \"Saurav\",\r
+
+      \    \"lastName\": \"Sarkar\",\r
+
+      \    \"email\": \"user@gmail.com\",\r
+
+      \    \"moveInData\": \"2026-03-01T00:00:00.000Z\",\r
+
+      \    \"phone\": \"+8801700000000\"\r
+
+      \    // \"customMessage\": \"I am interested in moving into this property.\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: create calender
+    request:
+      url: "{{base_url}}/calender/69992114c00a49167cbd7359"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"firstName\": \"Saurav\",\r
+
+          \    \"lastName\": \"Sarkar\",\r
+
+          \    \"email\": \"user@gmail.com\",\r
+
+          \    \"moveInData\": \"2026-03-01T00:00:00.000Z\",\r
+
+          \    \"phone\": \"+8801700000000\",\r
+
+          \    \"customMessage\": \"I am interested in moving into this property.\"\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "493"
+        - name: ETag
+          value: W/"1ed-rhg4b+/s7ssJGKRzW6d32ImU48s"
+        - name: Date
+          value: Sat, 21 Feb 2026 03:11:09 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 201,
+              "success": true,
+              "message": "Calender created successfully",
+              "data": {
+                  "firstName": "Saurav",
+                  "lastName": "Sarkar",
+                  "email": "user@gmail.com",
+                  "moveInData": "2026-03-01T00:00:00.000Z",
+                  "phone": "+8801700000000",
+                  "customMessage": "I am interested in moving into this property.",
+                  "user": "6996bf4a405cc1a8c458a35f",
+                  "property": "69992114c00a49167cbd7359",
+                  "_id": "6999224d281ab7f91c3142b4",
+                  "createdAt": "2026-02-21T03:11:09.611Z",
+                  "updatedAt": "2026-02-21T03:11:09.611Z",
+                  "__v": 0
+              },
+              "responseTime": "168ms"
+          }
+  - name: create calender
+    request:
+      url: "{{base_url}}/calender/69a5245c98b0908cb6ade7d7"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"firstName\": \"Saurav\",\r
+
+          \    \"lastName\": \"Sarkar\",\r
+
+          \    \"email\": \"user@gmail.com\",\r
+
+          \    \"moveInData\": \"2026-03-01T00:00:00.000Z\",\r
+
+          \    \"phone\": \"+8801700000000\"\r
+
+          \    // \"customMessage\": \"I am interested in moving into this property.\"\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "448"
+        - name: ETag
+          value: W/"1c0-cBCrZ9TMOMvcxjXRBcjnvpP+iQk"
+        - name: Date
+          value: Sun, 08 Mar 2026 10:02:05 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 201,
+              "success": true,
+              "message": "Calender created successfully",
+              "data": {
+                  "firstName": "Saurav",
+                  "lastName": "Sarkar",
+                  "email": "user@gmail.com",
+                  "moveInData": "2026-03-01T00:00:00.000Z",
+                  "phone": "+8801700000000",
+                  "status": "pending",
+                  "user": "6996bf4a405cc1a8c458a35f",
+                  "property": "69a5245c98b0908cb6ade7d7",
+                  "_id": "69ad491d342f1b4ab6ef0a0d",
+                  "createdAt": "2026-03-08T10:02:05.272Z",
+                  "updatedAt": "2026-03-08T10:02:05.272Z",
+                  "__v": 0
+              },
+              "responseTime": "177ms"
+          }

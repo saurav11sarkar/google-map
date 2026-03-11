@@ -1,0 +1,70 @@
+info:
+  name: get single user
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/user/6996c048405cc1a8c458a36b"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get single user
+    request:
+      url: "{{base_url}}/user/6993ff2fdfe7f63da0955e09"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "617"
+        - name: ETag
+          value: W/"269-Ywj0DrfPCoMjkuhMKKs5Koijp7c"
+        - name: Date
+          value: Tue, 17 Feb 2026 06:37:43 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "User retrieved successfully",
+              "data": {
+                  "_id": "6993ff2fdfe7f63da0955e09",
+                  "firstName": "Saurav",
+                  "lastName": "Sarkar",
+                  "email": "sauravsarkar.developer1@gmail.com",
+                  "profileImage": "https://res.cloudinary.com/dlpdumtua/image/upload/v1771306801/healthcare_app/ok4nt2rprwyeazv3dqxm.jpg",
+                  "role": "user",
+                  "gender": "male",
+                  "phoneNumber": "01700000000",
+                  "bio": "Full stack developer",
+                  "address": "Dhaka, Bangladesh",
+                  "location": "Banani",
+                  "lat": 23.7947055,
+                  "lng": 90.4023903,
+                  "postCode": "1213",
+                  "createdAt": "2026-02-17T05:39:59.290Z",
+                  "updatedAt": "2026-02-17T05:39:59.290Z",
+                  "__v": 0
+              },
+              "responseTime": "168ms"
+          }

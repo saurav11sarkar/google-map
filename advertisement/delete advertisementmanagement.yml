@@ -1,0 +1,17 @@
+info:
+  name: delete advertisementmanagement
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{base_url}}/advertisement/69a548782073864614c39efe"
+  auth:
+    type: bearer
+    token: "{{vendor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,99 @@
+info:
+  name: update subscribe
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/subscriber/6997f4622a968bd225f2bbb5"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"features\": [\r
+
+      \        \"All premium features\",\r
+
+      \        \"Dedicated supports\",\r
+
+      \        \"Early feature access\"\r
+
+      \    ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: update subscribe
+    request:
+      url: "{{base_url}}/subscriber/6997f4622a968bd225f2bbb5"
+      method: PUT
+      body:
+        type: json
+        data: "{\r
+
+          \    \"features\": [\r
+
+          \        \"All premium features\",\r
+
+          \        \"Dedicated supports\",\r
+
+          \        \"Early feature access\"\r
+
+          \    ]\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "381"
+        - name: ETag
+          value: W/"17d-L5qKmKMrxkXvTkDfFPaMwYB+lR8"
+        - name: Date
+          value: Fri, 20 Feb 2026 05:49:26 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Subscriber updated successfully",
+              "data": {
+                  "_id": "6997f4622a968bd225f2bbb5",
+                  "name": "Pro Annual",
+                  "days": 30,
+                  "price": 10000,
+                  "features": [
+                      "All premium features",
+                      "Dedicated supports",
+                      "Early feature access"
+                  ],
+                  "status": "active",
+                  "users": [],
+                  "createdAt": "2026-02-20T05:42:58.817Z",
+                  "updatedAt": "2026-02-20T05:49:26.418Z",
+                  "__v": 0
+              },
+              "responseTime": "129ms"
+          }

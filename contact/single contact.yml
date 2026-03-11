@@ -1,0 +1,62 @@
+info:
+  name: single contact
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/contact/69997e3da8629329bb2831e5"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: single contact
+    request:
+      url: "{{base_url}}/contact/69997e3da8629329bb2831e5"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "370"
+        - name: ETag
+          value: W/"172-VwBX9E21dq2nxPJcePPx2wnzPtQ"
+        - name: Date
+          value: Sat, 21 Feb 2026 09:46:12 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Contact fetched successfully",
+              "data": {
+                  "_id": "69997e3da8629329bb2831e5",
+                  "firstName": "Tanvir",
+                  "lastName": "Hasan",
+                  "email": "tanvir.hasan@example.com",
+                  "phone": "+8801612345678",
+                  "message": "Need support for my recent order.",
+                  "createdAt": "2026-02-21T09:43:25.391Z",
+                  "updatedAt": "2026-02-21T09:43:25.391Z",
+                  "__v": 0
+              },
+              "responseTime": "58ms"
+          }

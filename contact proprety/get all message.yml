@@ -1,0 +1,93 @@
+info:
+  name: get all message
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/contact-property/69ad26201d797c79ea1cbe33"
+  body:
+    type: text
+    data: ""
+  auth:
+    type: bearer
+    token: "{{user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get all message
+    request:
+      url: "{{base_url}}/contact-property/699c15d1a1ec4de26debe6de"
+      method: GET
+      body:
+        type: text
+        data: "{\r
+
+          \  \"contactId\": \"699c15d1a1ec4de26debe6de\",\r
+
+          \  \"message\": \"Hello, thanks for contacting\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "707"
+        - name: ETag
+          value: W/"2c3-qT5C4h1zRJJSTtG8iCpRR6oucAU"
+        - name: Date
+          value: Mon, 23 Feb 2026 09:02:24 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Request successfully completed",
+              "data": {
+                  "_id": "699c15d1a1ec4de26debe6de",
+                  "userId": "6996bf4a405cc1a8c458a35f",
+                  "propertyId": "69992023c00a49167cbd7353",
+                  "propertyOwnerId": "69980bf9a68a04ad9a5d3cef",
+                  "status": "responded",
+                  "isClosed": false,
+                  "messages": [
+                      {
+                          "senderId": "6996bf4a405cc1a8c458a35f",
+                          "senderRole": "user",
+                          "message": "I am interested in this property"
+                      },
+                      {
+                          "senderId": "69980bf9a68a04ad9a5d3cef",
+                          "senderRole": "vendor",
+                          "message": "Hello, thanks for contacting"
+                      },
+                      {
+                          "senderId": "6996bf4a405cc1a8c458a35f",
+                          "senderRole": "user",
+                          "message": "Hello, thanks for contacting"
+                      }
+                  ],
+                  "createdAt": "2026-02-23T08:54:41.572Z",
+                  "updatedAt": "2026-02-23T09:00:42.244Z",
+                  "__v": 0
+              },
+              "responseTime": "52ms"
+          }

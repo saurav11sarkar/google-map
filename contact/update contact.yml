@@ -1,0 +1,78 @@
+info:
+  name: update contact
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/contact/69997e3da8629329bb2831e5"
+  body:
+    type: json
+    data: "{\r
+
+      \     \"message\": \"Need support for my recent orders.\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: update contact
+    request:
+      url: "{{base_url}}/contact/69997e3da8629329bb2831e5"
+      method: PUT
+      body:
+        type: json
+        data: "{\r
+
+          \     \"message\": \"Need support for my recent orders.\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "371"
+        - name: ETag
+          value: W/"173-TtO0m9tgAu57oxhreUci+xwHtPM"
+        - name: Date
+          value: Sat, 21 Feb 2026 09:49:49 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Contact updated successfully",
+              "data": {
+                  "_id": "69997e3da8629329bb2831e5",
+                  "firstName": "Tanvir",
+                  "lastName": "Hasan",
+                  "email": "tanvir.hasan@example.com",
+                  "phone": "+8801612345678",
+                  "message": "Need support for my recent orders.",
+                  "createdAt": "2026-02-21T09:43:25.391Z",
+                  "updatedAt": "2026-02-21T09:49:49.694Z",
+                  "__v": 0
+              },
+              "responseTime": "73ms"
+          }

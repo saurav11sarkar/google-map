@@ -1,0 +1,58 @@
+info:
+  name: agent overview
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{base_url}}/dashboard/agent-overview"
+  auth:
+    type: bearer
+    token: "{{agent}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: agent overview
+    request:
+      url: "{{base_url}}/dashboard/agent-overview"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "162"
+        - name: ETag
+          value: W/"a2-L4YO9Txeat7kwYD4vTZSAGIDH+A"
+        - name: Date
+          value: Sun, 08 Mar 2026 06:30:36 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Agent dashboard overview",
+              "data": {
+                  "totalProperty": 1,
+                  "activeProperty": 0,
+                  "upCommingSiteViste": 3
+              },
+              "responseTime": "155ms"
+          }

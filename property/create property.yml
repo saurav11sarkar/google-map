@@ -1,0 +1,313 @@
+info:
+  name: create property
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/property"
+  body:
+    type: multipart-form
+    data:
+      - name: images
+        type: file
+        value:
+          - /C:/Users/Saurav/Downloads/movies.jpeg
+          - /C:/Users/Saurav/Downloads/musice2.jpg
+      - name: title
+        type: text
+        value: Modern 2-Bedroom Apartment in Nairobi
+      - name: listingType
+        type: text
+        value: For Sale
+      - name: propertyType
+        type: text
+        value: Bungalow
+      - name: bedrooms
+        type: text
+        value: "4"
+      - name: bathrooms
+        type: text
+        value: "3"
+      - name: area
+        type: text
+        value: "220"
+      - name: builtUp
+        type: text
+        value: "160"
+        disabled: true
+      - name: plot
+        type: text
+        value: "200"
+        disabled: true
+      - name: keyBathrooms
+        type: text
+        value: Ensuite
+        disabled: true
+      - name: keyBedRooms
+        type: text
+        value: Master + 2
+        disabled: true
+      - name: keyBuiltUp
+        type: text
+        value: "160"
+        disabled: true
+      - name: keyKitchenType
+        type: text
+        value: Open Plan
+        disabled: true
+      - name: keyParking
+        type: text
+        value: 2 Covered Spaces
+        disabled: true
+      - name: keyFinishes
+        type: text
+        value: High-End Finish
+        disabled: true
+      - name: keyBalconyType
+        type: text
+        value: Sea View Balcony
+        disabled: true
+      - name: keyStorage
+        type: text
+        value: Walk-in Closet
+        disabled: true
+      - name: keyCoolingSystem
+        type: text
+        value: Central AC
+        disabled: true
+      - name: keyMoveInStatus
+        type: text
+        value: Ready
+        disabled: true
+      - name: description
+        type: text
+        value: Spacious bungalow in a quiet neighborhood, perfect for families.
+      - name: propertyCommunityAmenities
+        type: text
+        value: Swimming Pool,Garden,24/7 Security
+        disabled: true
+      - name: location
+        type: text
+        value: Mombasa, Kenya
+      - name: originalPrice
+        type: text
+        value: "270000"
+        disabled: true
+      - name: purpose
+        type: text
+        value: Investment
+        disabled: true
+      - name: referenceNumber
+        type: text
+        value: PNTH-2026-001
+        disabled: true
+      - name: furnishing
+        type: text
+        value: Fully Furnished
+        disabled: true
+      - name: addedOn
+        type: text
+        value: 2026-03-02
+        disabled: true
+      - name: handoverDate
+        type: text
+        value: 2026-06-01T00:00:00.000Z
+        disabled: true
+      - name: status
+        type: text
+        value: pending
+        disabled: true
+      - name: price
+        type: text
+        value: "370000"
+  auth:
+    type: bearer
+    token: "{{agent1}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: create property
+    request:
+      url: "{{base_url}}/property"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: images
+            type: file
+            value:
+              - /C:/Users/Saurav/Downloads/Sign up.png
+              - /C:/Users/Saurav/Downloads/About us.png
+              - /C:/Users/Saurav/Downloads/Frame 1000005513 (1).png
+              - /C:/Users/Saurav/Downloads/Frame 1000005513.png
+          - name: title
+            type: text
+            value: Luxury Penthouse with Sea View
+          - name: listingType
+            type: text
+            value: For Sale
+          - name: propertyType
+            type: text
+            value: Penthouse
+          - name: bedrooms
+            type: text
+            value: "3"
+          - name: bathrooms
+            type: text
+            value: "2"
+          - name: area
+            type: text
+            value: "180"
+          - name: builtUp
+            type: text
+            value: "160"
+            disabled: true
+          - name: plot
+            type: text
+            value: "200"
+            disabled: true
+          - name: keyBathrooms
+            type: text
+            value: Ensuite
+            disabled: true
+          - name: keyBedRooms
+            type: text
+            value: Master + 2
+            disabled: true
+          - name: keyBuiltUp
+            type: text
+            value: "160"
+            disabled: true
+          - name: keyKitchenType
+            type: text
+            value: Open Plan
+            disabled: true
+          - name: keyParking
+            type: text
+            value: 2 Covered Spaces
+            disabled: true
+          - name: keyFinishes
+            type: text
+            value: High-End Finish
+            disabled: true
+          - name: keyBalconyType
+            type: text
+            value: Sea View Balcony
+            disabled: true
+          - name: keyStorage
+            type: text
+            value: Walk-in Closet
+            disabled: true
+          - name: keyCoolingSystem
+            type: text
+            value: Central AC
+            disabled: true
+          - name: keyMoveInStatus
+            type: text
+            value: Ready
+            disabled: true
+          - name: description
+            type: text
+            value: A luxurious penthouse with stunning sea views and modern amenities.
+          - name: propertyCommunityAmenities
+            type: text
+            value: Gym,Swimming Pool,24/7 Security
+            disabled: true
+          - name: location
+            type: text
+            value: Mombasa, Kenya
+          - name: originalPrice
+            type: text
+            value: "270000"
+          - name: purpose
+            type: text
+            value: Investment
+            disabled: true
+          - name: referenceNumber
+            type: text
+            value: PNTH-2026-001
+            disabled: true
+          - name: furnishing
+            type: text
+            value: Fully Furnished
+            disabled: true
+          - name: addedOn
+            type: text
+            value: 2026-03-02
+            disabled: true
+          - name: handoverDate
+            type: text
+            value: 2026-06-01T00:00:00.000Z
+            disabled: true
+          - name: status
+            type: text
+            value: pending
+            disabled: true
+          - name: price
+            type: text
+            value: "250000"
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1090"
+        - name: ETag
+          value: W/"442-XpPHjbZWuBF11wjlEIzgL5h4htY"
+        - name: Date
+          value: Mon, 02 Mar 2026 05:28:34 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 201,
+              "success": true,
+              "message": "Property created successfully",
+              "data": {
+                  "title": "Luxury Penthouse with Sea View",
+                  "listingType": "For Sale",
+                  "propertyType": "Penthouse",
+                  "bedrooms": 3,
+                  "bathrooms": 2,
+                  "area": 180,
+                  "description": "A luxurious penthouse with stunning sea views and modern amenities.",
+                  "propertyCommunityAmenities": [],
+                  "location": "Mombasa, Kenya",
+                  "lat": -4.05052,
+                  "lng": 39.667169,
+                  "price": 250000,
+                  "images": [
+                      "https://res.cloudinary.com/dlpdumtua/image/upload/v1772429311/healthcare_app/vtspg4mizddbawajicdv.png",
+                      "https://res.cloudinary.com/dlpdumtua/image/upload/v1772429312/healthcare_app/eqatm9ti9gotlglgsnxj.png",
+                      "https://res.cloudinary.com/dlpdumtua/image/upload/v1772429312/healthcare_app/ari4uxy1fvjo6onqxl1w.png",
+                      "https://res.cloudinary.com/dlpdumtua/image/upload/v1772429312/healthcare_app/wuxbp2jjrvni2aimcxnc.png"
+                  ],
+                  "originalPrice": 270000,
+                  "status": "pending",
+                  "createBy": "6996c048405cc1a8c458a36b",
+                  "listingUser": [],
+                  "bookmarkUser": [],
+                  "_id": "69a5200298b0908cb6ade7d4",
+                  "createdAt": "2026-03-02T05:28:34.325Z",
+                  "updatedAt": "2026-03-02T05:28:34.325Z",
+                  "__v": 0
+              },
+              "responseTime": "5991ms"
+          }

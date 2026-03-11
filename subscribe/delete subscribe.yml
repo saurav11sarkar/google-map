@@ -1,0 +1,17 @@
+info:
+  name: delete subscribe
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{base_url}}/subscriber/6997f4622a968bd225f2bbb5"
+  auth:
+    type: bearer
+    token: "{{admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

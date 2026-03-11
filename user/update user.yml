@@ -1,0 +1,136 @@
+info:
+  name: update user
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/user/6996c048405cc1a8c458a36b"
+  body:
+    type: multipart-form
+    data:
+      - name: firstName
+        type: text
+        value: Saurav
+        disabled: true
+      - name: lastName
+        type: text
+        value: Sarkar
+        disabled: true
+      - name: email
+        type: text
+        value: saurav@gmail.com
+        disabled: true
+      - name: password
+        type: text
+        value: "12345678"
+        disabled: true
+      - name: profileImage
+        type: file
+        value:
+          - /C:/Users/Saurav/Downloads/frames-for-your-heart-2d4lAQAlbDA-unsplash (1).jpg
+      - name: role
+        type: text
+        value: user
+      - name: gender
+        type: text
+        value: male
+      - name: phoneNumber
+        type: text
+        value: "01700000000"
+      - name: bio
+        type: text
+        value: I am a property buyer.
+      - name: address
+        type: text
+        value: Dhaka Bangladesh
+      - name: location
+        type: text
+        value: Dhaka
+      - name: lat
+        type: text
+        value: "23.8103"
+        disabled: true
+      - name: lng
+        type: text
+        value: "90.4125"
+        disabled: true
+      - name: postCode
+        type: text
+        value: "1207"
+      - name: status
+        type: text
+        value: active
+  auth:
+    type: bearer
+    token: "{{admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: update user
+    request:
+      url: "{{base_url}}/user/699347955327814d627d237c"
+      method: PUT
+      body:
+        type: json
+        data: "{\r
+
+          \    \"firstName\": \"Admin\",\r
+
+          \    \"lastName\": \"Sarkar\",\r
+
+          \    \"address\": \"Dhaka, Bangladesh\",\r
+
+          \    \"location\": \"Banani\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "427"
+        - name: ETag
+          value: W/"1ab-1UzWIRkTR0aqMZ0BMx0cmmQeQvU"
+        - name: Date
+          value: Tue, 17 Feb 2026 06:45:44 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "User updated successfully",
+              "data": {
+                  "_id": "699347955327814d627d237c",
+                  "firstName": "Admin",
+                  "lastName": "Sarkar",
+                  "email": "sauravsarkar.developer@gmail.com",
+                  "role": "admin",
+                  "createdAt": "2026-02-16T16:36:37.777Z",
+                  "updatedAt": "2026-02-17T06:45:44.581Z",
+                  "__v": 0,
+                  "verifiedForget": false,
+                  "address": "Dhaka, Bangladesh",
+                  "lat": 23.7947055,
+                  "lng": 90.4023903,
+                  "location": "Banani"
+              },
+              "responseTime": "988ms"
+          }

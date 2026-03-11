@@ -1,0 +1,158 @@
+info:
+  name: get all advertisementmanagement
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/advertisement/"
+  params:
+    - name: searchTerm
+      value: Homes
+      type: query
+      disabled: true
+    - name: companyName
+      value: ABC Real Estate
+      type: query
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "1"
+      type: query
+      disabled: true
+    - name: sortBy
+      value: advertisementType
+      type: query
+      disabled: true
+    - name: sortOrder
+      value: asc
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get all advertisementmanagement
+    request:
+      url: "{{base_url}}/advertisement/"
+      method: GET
+      params:
+        - name: searchTerm
+          value: Homes
+          type: query
+          disabled: true
+        - name: companyName
+          value: ABC Real Estate
+          type: query
+          disabled: true
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: limit
+          value: "1"
+          type: query
+          disabled: true
+        - name: sortBy
+          value: advertisementType
+          type: query
+          disabled: true
+        - name: sortOrder
+          value: asc
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1418"
+        - name: ETag
+          value: W/"58a-s8W6czYiPWHIqzSL4x9IgDksZ8U"
+        - name: Date
+          value: Mon, 02 Mar 2026 09:13:18 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "All advertisements retrieved successfully",
+              "meta": {
+                  "total": 2,
+                  "limit": 10,
+                  "page": 1
+              },
+              "data": [
+                  {
+                      "_id": "69a548782073864614c39efe",
+                      "companyName": "Prime Homes Ltd",
+                      "advertisementType": "Video",
+                      "callToActionURL": "https://primehomes.com/view",
+                      "uploadMedia": "https://res.cloudinary.com/dlpdumtua/image/upload/v1772439673/healthcare_app/erbfxw3itsufxancqvon.png",
+                      "targetRegions": [
+                          "Nairobi",
+                          "Nakuru"
+                      ],
+                      "targetAudience": [
+                          "Buyers",
+                          "Families"
+                      ],
+                      "compaingBudget": 8000,
+                      "compaingDuration": "45 days",
+                      "startDate": "2026-05-01T00:00:00.000Z",
+                      "endDate": "2026-06-15T00:00:00.000Z",
+                      "paymentStatus": "Paid",
+                      "createdBy": "6997f2e191513e9ca871a85b",
+                      "createdAt": "2026-03-02T08:21:12.551Z",
+                      "updatedAt": "2026-03-02T08:21:12.551Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "69a545d9fd1337ec59846c02",
+                      "companyName": "ABC Real Estate",
+                      "advertisementType": "Banner",
+                      "callToActionURL": "https://www.abcrealestate.com/contact",
+                      "uploadMedia": "https://res.cloudinary.com/dlpdumtua/image/upload/v1772439001/healthcare_app/yvim2bi2s897vcbn18um.jpg",
+                      "targetRegions": [
+                          "Nairobi",
+                          "Mombasa",
+                          "Kisumu"
+                      ],
+                      "targetAudience": [
+                          "Investors",
+                          "Home Buyers",
+                          "Renters"
+                      ],
+                      "compaingBudget": 5000,
+                      "compaingDuration": "30 days",
+                      "startDate": "2026-03-02T00:00:00.000Z",
+                      "endDate": "2026-04-01T00:00:00.000Z",
+                      "paymentStatus": "Paid",
+                      "createdBy": "6997f2e191513e9ca871a85b",
+                      "createdAt": "2026-03-02T08:10:01.231Z",
+                      "updatedAt": "2026-03-02T08:10:01.231Z",
+                      "__v": 0
+                  }
+              ],
+              "responseTime": "94ms"
+          }

@@ -1,0 +1,165 @@
+info:
+  name: callback url
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: https://f2b2-103-186-20-4.ngrok-free.app/api/v1/mpesa/callback
+  body:
+    type: json
+    data: "{\r
+
+      \  \"Body\": {\r
+
+      \    \"stkCallback\": {\r
+
+      \      \"MerchantRequestID\": \"abb0-4b4c-8ca1-b66123edd18425870\",\r
+
+      \      \"CheckoutRequestID\": \"ws_CO_09032026065001376708374149\",\r
+
+      \      \"ResultCode\": 0,\r
+
+      \      \"ResultDesc\": \"The service request is processed successfully.\",\r
+
+      \      \"CallbackMetadata\": {\r
+
+      \        \"Item\": [\r
+
+      \          { \"Name\": \"Amount\", \"Value\": 10000 },\r
+
+      \          { \"Name\": \"MpesaReceiptNumber\", \"Value\": \"NLJ7RT61SV\" },\r
+
+      \          { \"Name\": \"TransactionDate\", \"Value\": 20260301124000 },\r
+
+      \          { \"Name\": \"PhoneNumber\", \"Value\": 254708374149 }\r
+
+      \        ]\r
+
+      \      }\r
+
+      \    }\r
+
+      \  }\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: callback url
+    request:
+      url: "{{base_url}}/mpesa/callback"
+      method: POST
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "145"
+        - name: ETag
+          value: W/"91-eZPQrJetwGB566prhkWFsNfG99E"
+        - name: Date
+          value: Sun, 01 Mar 2026 06:35:43 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Request successfully completed",
+              "data": {
+                  "ResultCode": 0,
+                  "ResultDesc": "Accepted"
+              },
+              "responseTime": "0ms"
+          }
+  - name: callback url
+    request:
+      url: https://f2b2-103-186-20-4.ngrok-free.app/api/v1/mpesa/callback
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"Body\": {\r
+
+          \    \"stkCallback\": {\r
+
+          \      \"MerchantRequestID\": \"abb0-4b4c-8ca1-b66123edd18425870\",\r
+
+          \      \"CheckoutRequestID\": \"ws_CO_09032026065001376708374149\",\r
+
+          \      \"ResultCode\": 0,\r
+
+          \      \"ResultDesc\": \"The service request is processed successfully.\",\r
+
+          \      \"CallbackMetadata\": {\r
+
+          \        \"Item\": [\r
+
+          \          { \"Name\": \"Amount\", \"Value\": 10000 },\r
+
+          \          { \"Name\": \"MpesaReceiptNumber\", \"Value\": \"NLJ7RT61SV\" },\r
+
+          \          { \"Name\": \"TransactionDate\", \"Value\": 20260301124000 },\r
+
+          \          { \"Name\": \"PhoneNumber\", \"Value\": 254708374149 }\r
+
+          \        ]\r
+
+          \      }\r
+
+          \    }\r
+
+          \  }\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Length
+          value: "147"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Mon, 09 Mar 2026 03:52:51 GMT
+        - name: Etag
+          value: W/"93-gM/Ai/x3oln3Cr/2IHqyHEzaKLU"
+        - name: Ngrok-Agent-Ips
+          value: 103.186.20.4
+        - name: X-Powered-By
+          value: Express
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Request successfully completed",
+              "data": {
+                  "ResultCode": 0,
+                  "ResultDesc": "Accepted"
+              },
+              "responseTime": "338ms"
+          }

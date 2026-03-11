@@ -1,0 +1,73 @@
+info:
+  name: get single log history
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/loginhistory/69abaedc56fb0ac7a786e39a"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get single log history
+    request:
+      url: "{{base_url}}/loginhistory/69abaedc56fb0ac7a786e39a"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "582"
+        - name: ETag
+          value: W/"246-riHm9X30375pcatWcejvT7c/z0g"
+        - name: Date
+          value: Sat, 07 Mar 2026 05:31:31 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Login history fetched successfully",
+              "data": {
+                  "_id": "69abaedc56fb0ac7a786e39a",
+                  "userId": {
+                      "verifiedForget": false,
+                      "isSubscribed": false,
+                      "_id": "6997f2e191513e9ca871a85b",
+                      "firstName": "admin",
+                      "lastName": "Sarkar",
+                      "email": "admin@gmail.com",
+                      "role": "admin",
+                      "createdAt": "2026-02-20T05:36:33.736Z",
+                      "updatedAt": "2026-02-28T03:09:54.763Z",
+                      "__v": 0,
+                      "status": "active"
+                  },
+                  "role": "admin",
+                  "loginTime": "2026-03-07T04:51:40.005Z",
+                  "ipaddress": "127.0.0.1",
+                  "createdAt": "2026-03-07T04:51:40.008Z",
+                  "updatedAt": "2026-03-07T04:51:40.008Z",
+                  "__v": 0
+              },
+              "responseTime": "127ms"
+          }

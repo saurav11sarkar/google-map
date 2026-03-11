@@ -1,0 +1,17 @@
+info:
+  name: deleted property
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{base_url}}/property/699721b1ba2663d5e8701a8f"
+  auth:
+    type: bearer
+    token: "{{agent}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

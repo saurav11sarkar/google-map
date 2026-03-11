@@ -1,0 +1,17 @@
+info:
+  name: delete contact
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{base_url}}/contact/69997e3da8629329bb2831e5"
+  auth:
+    type: bearer
+    token: "{{admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

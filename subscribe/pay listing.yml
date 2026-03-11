@@ -1,0 +1,54 @@
+info:
+  name: pay listing
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/subscriber/pad-listing/6997f278228f1caf69bb712f"
+  auth:
+    type: bearer
+    token: "{{vendor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: pay listing
+    request:
+      url: "{{base_url}}/subscriber/pad-listing/6997f278228f1caf69bb712f"
+      method: POST
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "546"
+        - name: ETag
+          value: W/"222-Y7UtMucfc5TwYRTYv+dvAkwOLpY"
+        - name: Date
+          value: Fri, 20 Feb 2026 07:28:39 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Pad listing created successfully",
+              "data": "https://checkout.stripe.com/c/pay/cs_test_a1lXZJi8zvG4qprkD76kvFe9fFtFErq1XIU4Tj2Mj6h4FQ0jnDpsIbJQkI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSdkdWxOYHwnPyd1blpxYHZxWjA0VlZAPVxCZlZQZk5TVE90bXdpXVVHS1NLY0FiaG1cVkhOa0J2NW5ITmBKMEZAUVI1SERsRGtQN3VCX1BzMTJAPE8yMm9%2FQ3VxaG1iM38ybnZPd1Q8bG1CNTU3fzRxUGJIaCcpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjY2NjY2MnKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSdga2RnaWBVaWRmYG1qaWFgd3YnP3F3cGB4JSUl",
+              "responseTime": "977ms"
+          }

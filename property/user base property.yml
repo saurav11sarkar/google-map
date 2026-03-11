@@ -1,0 +1,226 @@
+info:
+  name: user base property
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{base_url}}/property/user/69980bf9a68a04ad9a5d3cef"
+  params:
+    - name: searchTerm
+      value: Apartment
+      type: query
+      disabled: true
+    - name: listingType
+      value: For Sale
+      type: query
+      disabled: true
+    - name: location
+      value: Gulshan, Dhaka
+      type: query
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "1"
+      type: query
+      disabled: true
+    - name: sortBy
+      value: price
+      type: query
+      disabled: true
+    - name: sortOrder
+      value: asc
+      type: query
+      disabled: true
+    - name: propertyType
+      value: Penthouse
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: user base property
+    request:
+      url: "{{base_url}}/property/user/69980bf9a68a04ad9a5d3cef"
+      method: GET
+      params:
+        - name: searchTerm
+          value: Apartment
+          type: query
+          disabled: true
+        - name: listingType
+          value: For Sale
+          type: query
+          disabled: true
+        - name: location
+          value: Gulshan, Dhaka
+          type: query
+          disabled: true
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: limit
+          value: "1"
+          type: query
+          disabled: true
+        - name: sortBy
+          value: price
+          type: query
+          disabled: true
+        - name: sortOrder
+          value: asc
+          type: query
+          disabled: true
+        - name: propertyType
+          value: Penthouse
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "3264"
+        - name: ETag
+          value: W/"cc0-h9DXSU7hZjEHdqTjVz4NdNmxlus"
+        - name: Date
+          value: Sat, 21 Feb 2026 08:12:45 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "User property retrieved successfully",
+              "meta": {
+                  "page": 1,
+                  "limit": 10,
+                  "total": 4
+              },
+              "data": [
+                  {
+                      "_id": "6999213dc00a49167cbd735c",
+                      "title": "Cozy Studio Apartment",
+                      "listingType": "For Rent",
+                      "propertyType": "Studio",
+                      "bedrooms": 1,
+                      "bathrooms": 1,
+                      "area": 550,
+                      "description": "Affordable and cozy studio apartment perfect for singles.",
+                      "propertyCommunityAmenities": [],
+                      "location": "Dhanmondi, Dhaka",
+                      "lat": 23.7535434,
+                      "lng": 90.3703052,
+                      "price": 22000,
+                      "images": [
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1771643195/healthcare_app/nma0fyofdvtrxu9lxffd.jpg",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1771643196/healthcare_app/b1tf3fhdi6arv64impdy.jpg",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1771643195/healthcare_app/iptskfctjdbykaczwqpd.jpg"
+                      ],
+                      "status": "pending",
+                      "createBy": "69980bf9a68a04ad9a5d3cef",
+                      "listingUser": [],
+                      "createdAt": "2026-02-21T03:06:37.256Z",
+                      "updatedAt": "2026-02-21T03:06:37.256Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "69992114c00a49167cbd7359",
+                      "title": "Spacious Duplex House",
+                      "listingType": "For Sale",
+                      "propertyType": "Penthouse",
+                      "bedrooms": 5,
+                      "bathrooms": 4,
+                      "area": 3200,
+                      "description": "Beautiful duplex house with large garden and parking facilities.",
+                      "propertyCommunityAmenities": [],
+                      "location": "Uttara, Dhaka",
+                      "lat": 23.7392911,
+                      "lng": 90.407229,
+                      "price": 3500000,
+                      "images": [
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1771643155/healthcare_app/ynozi1npubb86jpck1tr.jpg",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1771643155/healthcare_app/nxq56slxfp1epkk7pnea.jpg"
+                      ],
+                      "status": "pending",
+                      "createBy": "69980bf9a68a04ad9a5d3cef",
+                      "listingUser": [],
+                      "createdAt": "2026-02-21T03:05:56.293Z",
+                      "updatedAt": "2026-02-21T03:05:56.293Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "699920c0c00a49167cbd7356",
+                      "title": "Modern Family Apartment",
+                      "listingType": "For Rent",
+                      "propertyType": "Apartment",
+                      "bedrooms": 2,
+                      "bathrooms": 2,
+                      "area": 1100,
+                      "description": "Comfortable family apartment located in a prime residential area.",
+                      "propertyCommunityAmenities": [],
+                      "location": "Banani, Dhaka",
+                      "lat": 23.790321,
+                      "lng": 90.4076959,
+                      "price": 45000,
+                      "images": [
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1771643071/healthcare_app/tbr6qled4wzemwdvbaju.jpg",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1771643071/healthcare_app/h9ifwra3rp0e7ceyjszv.jpg"
+                      ],
+                      "status": "pending",
+                      "createBy": "69980bf9a68a04ad9a5d3cef",
+                      "listingUser": [],
+                      "createdAt": "2026-02-21T03:04:32.940Z",
+                      "updatedAt": "2026-02-21T03:04:32.940Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "69992023c00a49167cbd7353",
+                      "title": "Luxury Sea View Apartment",
+                      "listingType": "For Sale",
+                      "propertyType": "Apartment",
+                      "bedrooms": 3,
+                      "bathrooms": 2,
+                      "area": 1450,
+                      "description": "A beautiful luxury apartment with sea view and modern facilities.",
+                      "propertyCommunityAmenities": [],
+                      "location": "Gulshan, Dhaka",
+                      "lat": 23.7921765,
+                      "lng": 90.4155528,
+                      "price": 1250000,
+                      "images": [
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1771642914/healthcare_app/yjttj57z1porgdvqzahl.jpg",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1771642914/healthcare_app/hi3gk4f1lw6otvzj5ymv.jpg",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1771642913/healthcare_app/jwpaaohhcoaayvw1qyn3.jpg"
+                      ],
+                      "status": "pending",
+                      "createBy": "69980bf9a68a04ad9a5d3cef",
+                      "listingUser": [],
+                      "createdAt": "2026-02-21T03:01:55.537Z",
+                      "updatedAt": "2026-02-21T03:01:55.537Z",
+                      "__v": 0
+                  }
+              ],
+              "responseTime": "150ms"
+          }

@@ -1,0 +1,248 @@
+info:
+  name: get subscribe agent property top show
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: "{{base_url}}/property/subscriber-property-top"
+  params:
+    - name: searchTerm
+      value: Apartment
+      type: query
+      disabled: true
+    - name: listingType
+      value: For Sale
+      type: query
+      disabled: true
+    - name: location
+      value: Gulshan, Dhaka
+      type: query
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "1"
+      type: query
+      disabled: true
+    - name: sortBy
+      value: price
+      type: query
+      disabled: true
+    - name: sortOrder
+      value: asc
+      type: query
+      disabled: true
+    - name: propertyType
+      value: Penthouse
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get subscribe agent property top show
+    request:
+      url: "{{base_url}}/property/subscriber-property-top"
+      method: GET
+      params:
+        - name: searchTerm
+          value: Apartment
+          type: query
+          disabled: true
+        - name: listingType
+          value: For Sale
+          type: query
+          disabled: true
+        - name: location
+          value: Gulshan, Dhaka
+          type: query
+          disabled: true
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: limit
+          value: "1"
+          type: query
+          disabled: true
+        - name: sortBy
+          value: price
+          type: query
+          disabled: true
+        - name: sortOrder
+          value: asc
+          type: query
+          disabled: true
+        - name: propertyType
+          value: Penthouse
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "3580"
+        - name: ETag
+          value: W/"dfc-F5KSn9nxMvtTGlJn8E0lWIcNBho"
+        - name: Date
+          value: Mon, 02 Mar 2026 06:16:01 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Agent property retrieved successfully",
+              "meta": {
+                  "page": 1,
+                  "limit": 10,
+                  "total": 3
+              },
+              "data": [
+                  {
+                      "_id": "69a5245c98b0908cb6ade7d7",
+                      "title": "Modern 2-Bedroom Apartment in Nairobi",
+                      "listingType": "For Rent",
+                      "propertyType": "Apartment",
+                      "bedrooms": 2,
+                      "bathrooms": 1,
+                      "area": 90,
+                      "description": "A modern apartment in central Nairobi with easy access to shops and transport.",
+                      "propertyCommunityAmenities": [],
+                      "location": "Nairobi, Kenya",
+                      "lat": -1.2890006,
+                      "lng": 36.8172812,
+                      "price": 1300,
+                      "images": [
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1772430428/healthcare_app/yim4humva9op60kbgms5.png",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1772430428/healthcare_app/ayuknc02rntoqtsvtpjh.png"
+                      ],
+                      "originalPrice": 270000,
+                      "status": "pending",
+                      "createBy": {
+                          "verifiedForget": false,
+                          "_id": "6996c048405cc1a8c458a36b",
+                          "firstName": "Agent",
+                          "lastName": "Sarkar",
+                          "email": "agent@gmail.com",
+                          "role": "agent",
+                          "createdAt": "2026-02-19T07:48:24.052Z",
+                          "updatedAt": "2026-03-02T05:21:50.004Z",
+                          "__v": 0,
+                          "status": "active",
+                          "isSubscribed": true,
+                          "subscribers": "6997f278228f1caf69bb712f",
+                          "subscriptionEndDate": "2026-03-09T05:21:50.004Z"
+                      },
+                      "listingUser": [],
+                      "bookmarkUser": [],
+                      "createdAt": "2026-03-02T05:47:08.885Z",
+                      "updatedAt": "2026-03-02T05:47:08.885Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "69a5200298b0908cb6ade7d4",
+                      "title": "Luxury Penthouse with Sea View",
+                      "listingType": "For Sale",
+                      "propertyType": "Penthouse",
+                      "bedrooms": 3,
+                      "bathrooms": 2,
+                      "area": 180,
+                      "description": "A luxurious penthouse with stunning sea views and modern amenities.",
+                      "propertyCommunityAmenities": [],
+                      "location": "Mombasa, Kenya",
+                      "lat": -4.05052,
+                      "lng": 39.667169,
+                      "price": 250000,
+                      "images": [
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1772429311/healthcare_app/vtspg4mizddbawajicdv.png",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1772429312/healthcare_app/eqatm9ti9gotlglgsnxj.png",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1772429312/healthcare_app/ari4uxy1fvjo6onqxl1w.png",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1772429312/healthcare_app/wuxbp2jjrvni2aimcxnc.png"
+                      ],
+                      "originalPrice": 270000,
+                      "status": "approved",
+                      "createBy": {
+                          "verifiedForget": false,
+                          "_id": "6996c048405cc1a8c458a36b",
+                          "firstName": "Agent",
+                          "lastName": "Sarkar",
+                          "email": "agent@gmail.com",
+                          "role": "agent",
+                          "createdAt": "2026-02-19T07:48:24.052Z",
+                          "updatedAt": "2026-03-02T05:21:50.004Z",
+                          "__v": 0,
+                          "status": "active",
+                          "isSubscribed": true,
+                          "subscribers": "6997f278228f1caf69bb712f",
+                          "subscriptionEndDate": "2026-03-09T05:21:50.004Z"
+                      },
+                      "listingUser": [],
+                      "bookmarkUser": [],
+                      "createdAt": "2026-03-02T05:28:34.325Z",
+                      "updatedAt": "2026-03-02T06:06:15.474Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "69a5284e98b0908cb6ade7e5",
+                      "title": "Modern 2-Bedroom Apartment in Nairobi",
+                      "listingType": "For Sale",
+                      "propertyType": "Bungalow",
+                      "bedrooms": 4,
+                      "bathrooms": 3,
+                      "area": 220,
+                      "description": "Spacious bungalow in a quiet neighborhood, perfect for families.",
+                      "propertyCommunityAmenities": [],
+                      "location": "Mombasa, Kenya",
+                      "lat": -4.05052,
+                      "lng": 39.667169,
+                      "price": 370000,
+                      "images": [
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1772431438/healthcare_app/vnbjgnmrp1nh3qeu1p1m.jpg",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1772431439/healthcare_app/unerwsfxqaguetjbexvi.jpg"
+                      ],
+                      "status": "pending",
+                      "createBy": {
+                          "_id": "69a5249198b0908cb6ade7da",
+                          "firstName": "agent1",
+                          "lastName": "Sarkar",
+                          "email": "agent1@gmail.com",
+                          "role": "agent",
+                          "status": "active",
+                          "verifiedForget": false,
+                          "isSubscribed": false,
+                          "createdAt": "2026-03-02T05:48:01.159Z",
+                          "updatedAt": "2026-03-02T05:48:59.935Z",
+                          "__v": 0
+                      },
+                      "listingUser": [],
+                      "bookmarkUser": [],
+                      "createdAt": "2026-03-02T06:03:58.657Z",
+                      "updatedAt": "2026-03-02T06:03:58.657Z",
+                      "__v": 0
+                  }
+              ],
+              "responseTime": "130ms"
+          }

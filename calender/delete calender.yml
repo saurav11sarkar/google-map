@@ -1,0 +1,17 @@
+info:
+  name: delete calender
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{base_url}}/calender/6999224d281ab7f91c3142b4"
+  auth:
+    type: bearer
+    token: "{{user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,109 @@
+info:
+  name: get my all leads
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/contact-property/my-leads"
+  body:
+    type: text
+    data: ""
+  auth:
+    type: bearer
+    token: "{{agent}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get my all leads
+    request:
+      url: "{{base_url}}/contact-property/my-leads"
+      method: GET
+      body:
+        type: text
+        data: "{\r
+
+          \  \"contactId\": \"699c15d1a1ec4de26debe6de\",\r
+
+          \  \"message\": \"Hello, thanks for contacting\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "955"
+        - name: ETag
+          value: W/"3bb-iG0X9QXyKgyQ2lBs6fISzo8dcHo"
+        - name: Date
+          value: Sun, 08 Mar 2026 07:49:49 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Leads retrieved successfully",
+              "meta": {
+                  "page": 1,
+                  "limit": 10,
+                  "total": 1
+              },
+              "data": [
+                  {
+                      "_id": "69ad26201d797c79ea1cbe33",
+                      "userId": {
+                          "_id": "6996bf4a405cc1a8c458a35f",
+                          "firstName": "User",
+                          "lastName": "Sarkar",
+                          "email": "user@gmail.com",
+                          "role": "user"
+                      },
+                      "propertyId": {
+                          "_id": "69a5245c98b0908cb6ade7d7",
+                          "title": "Modern 2-Bedroom Apartment in Nairobi",
+                          "location": "Nairobi, Kenya",
+                          "price": 1300,
+                          "status": "approved"
+                      },
+                      "propertyOwnerId": {
+                          "_id": "6996c048405cc1a8c458a36b",
+                          "firstName": "Agent",
+                          "lastName": "Sarkar",
+                          "email": "agent@gmail.com",
+                          "role": "user",
+                          "profileImage": "https://res.cloudinary.com/dlpdumtua/image/upload/v1772949518/healthcare_app/bratxe8gxt54cy8ws6zd.jpg"
+                      },
+                      "status": "pending",
+                      "isClosed": false,
+                      "messages": [
+                          {
+                              "senderId": "6996bf4a405cc1a8c458a35f",
+                              "senderRole": "user",
+                              "message": "I am interested in this property!!!!"
+                          }
+                      ],
+                      "createdAt": "2026-03-08T07:32:48.209Z",
+                      "updatedAt": "2026-03-08T07:32:48.209Z",
+                      "__v": 0
+                  }
+              ],
+              "responseTime": "508ms"
+          }

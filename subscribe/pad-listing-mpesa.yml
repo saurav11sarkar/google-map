@@ -1,0 +1,121 @@
+info:
+  name: pad-listing-mpesa
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/subscriber/pad-listing-mpesa/6997f42b2a968bd225f2bbb3"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"phoneNumber\": \"254708374149\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{agent}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: pad-listing-mpesa
+    request:
+      url: "{{base_url}}/subscriber/pad-listing-mpesa/6997f278228f1caf69bb712f"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"phoneNumber\": \"254708374149\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "306"
+        - name: ETag
+          value: W/"132-bjfqI1u+hFaSpbd6A826gndiwiM"
+        - name: Date
+          value: Sun, 01 Mar 2026 06:24:14 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "M-Pesa STK Push initiated",
+              "data": {
+                  "paymentId": "69a3db88f73ad68e0a9f429f",
+                  "merchantRequestId": "ffff-4307-a58d-dd6f5c87be1915833",
+                  "checkoutRequestId": "ws_CO_01032026092414385708374149",
+                  "message": "Success. Request accepted for processing"
+              },
+              "responseTime": "5951ms"
+          }
+  - name: pad-listing-mpesa
+    request:
+      url: "{{base_url}}/subscriber/pad-listing-mpesa/6997f42b2a968bd225f2bbb3"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"phoneNumber\": \"254708374149\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "320"
+        - name: ETag
+          value: W/"140-US8ya5x/hQHz1JT+7fGpwqc7tp8"
+        - name: Date
+          value: Mon, 09 Mar 2026 07:55:09 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "M-Pesa STK Push initiated",
+              "data": {
+                  "paymentId": "69ae7cd908c923c558112084",
+                  "merchantRequestId": "7541-400c-92a5-84c89cc4b16611417",
+                  "checkoutRequestId": "ws_CO_09032026105508420708374149",
+                  "amount": 5000,
+                  "message": "Success. Request accepted for processing"
+              },
+              "responseTime": "3968ms"
+          }

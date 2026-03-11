@@ -1,0 +1,72 @@
+info:
+  name: verify email
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/auth/verify"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"user@gmail.com\",\r
+
+      \    \"otp\": \"763578\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: verify email
+    request:
+      url: "{{base_url}}/auth/verify"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"email\": \"sauravsarkar.developer@gmail.com\",\r
+
+          \    \"otp\": \"660612\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "143"
+        - name: ETag
+          value: W/"8f-2s/sxAm3FZlpXIugcHKKxOPlgQA"
+        - name: Date
+          value: Tue, 17 Feb 2026 04:42:36 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Email verified successfully",
+              "data": {
+                  "message": "OTP verified successfully"
+              },
+              "responseTime": "182ms"
+          }

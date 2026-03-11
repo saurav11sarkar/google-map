@@ -1,0 +1,63 @@
+info:
+  name: delete login history
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{base_url}}/loginhistory/69abaedc56fb0ac7a786e39a"
+  auth:
+    type: bearer
+    token: "{{admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: delete login history
+    request:
+      url: "{{base_url}}/loginhistory/69abaedc56fb0ac7a786e39a"
+      method: DELETE
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "345"
+        - name: ETag
+          value: W/"159-JxZ1RhrpJmx/BQdYomzyNAEt5bA"
+        - name: Date
+          value: Sat, 07 Mar 2026 05:33:23 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Login history deleted successfully",
+              "data": {
+                  "_id": "69abaedc56fb0ac7a786e39a",
+                  "userId": "6997f2e191513e9ca871a85b",
+                  "role": "admin",
+                  "loginTime": "2026-03-07T04:51:40.005Z",
+                  "ipaddress": "127.0.0.1",
+                  "createdAt": "2026-03-07T04:51:40.008Z",
+                  "updatedAt": "2026-03-07T04:51:40.008Z",
+                  "__v": 0
+              },
+              "responseTime": "108ms"
+          }

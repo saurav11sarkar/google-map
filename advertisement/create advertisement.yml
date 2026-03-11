@@ -1,0 +1,151 @@
+info:
+  name: create advertisement
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/advertisement/"
+  body:
+    type: multipart-form
+    data:
+      - name: companyName
+        type: text
+        value: Prime Homes Ltd
+      - name: advertisementType
+        type: text
+        value: Video
+      - name: callToActionURL
+        type: text
+        value: https://primehomes.com/view
+      - name: uploadMedia
+        type: file
+        value:
+          - /C:/Users/Saurav/Downloads/image.png
+      - name: targetRegions
+        type: text
+        value: '["Nairobi","Nakuru"]'
+      - name: targetAudience
+        type: text
+        value: '["Buyers","Families"]'
+      - name: compaingBudget
+        type: text
+        value: "8000"
+      - name: compaingDuration
+        type: text
+        value: 45 days
+      - name: startDate
+        type: text
+        value: 2026-05-01T00:00:00.000Z
+      - name: endDate
+        type: text
+        value: 2026-06-15T00:00:00.000Z
+      - name: paymentStatus
+        type: text
+        value: Paid
+  auth:
+    type: bearer
+    token: "{{vendor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: create advertisement
+    request:
+      url: "{{base_url}}/advertisement/"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: companyName
+            type: text
+            value: Prime Homes Ltd
+          - name: advertisementType
+            type: text
+            value: Video
+          - name: callToActionURL
+            type: text
+            value: https://primehomes.com/view
+          - name: uploadMedia
+            type: file
+            value:
+              - /C:/Users/Saurav/Downloads/image.png
+          - name: targetRegions
+            type: text
+            value: '["Nairobi","Nakuru"]'
+          - name: targetAudience
+            type: text
+            value: '["Buyers","Families"]'
+          - name: compaingBudget
+            type: text
+            value: "8000"
+          - name: compaingDuration
+            type: text
+            value: 45 days
+          - name: startDate
+            type: text
+            value: 2026-05-01T00:00:00.000Z
+          - name: endDate
+            type: text
+            value: 2026-06-15T00:00:00.000Z
+          - name: paymentStatus
+            type: text
+            value: Paid
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "719"
+        - name: ETag
+          value: W/"2cf-4m/XZBtRJZSzeTD4ye5bHBREn1w"
+        - name: Date
+          value: Mon, 02 Mar 2026 08:21:12 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 201,
+              "success": true,
+              "message": "Request successfully completed",
+              "data": {
+                  "companyName": "Prime Homes Ltd",
+                  "advertisementType": "Video",
+                  "callToActionURL": "https://primehomes.com/view",
+                  "uploadMedia": "https://res.cloudinary.com/dlpdumtua/image/upload/v1772439673/healthcare_app/erbfxw3itsufxancqvon.png",
+                  "targetRegions": [
+                      "Nairobi",
+                      "Nakuru"
+                  ],
+                  "targetAudience": [
+                      "Buyers",
+                      "Families"
+                  ],
+                  "compaingBudget": 8000,
+                  "compaingDuration": "45 days",
+                  "startDate": "2026-05-01T00:00:00.000Z",
+                  "endDate": "2026-06-15T00:00:00.000Z",
+                  "paymentStatus": "Paid",
+                  "createdBy": "6997f2e191513e9ca871a85b",
+                  "_id": "69a548782073864614c39efe",
+                  "createdAt": "2026-03-02T08:21:12.551Z",
+                  "updatedAt": "2026-03-02T08:21:12.551Z",
+                  "__v": 0
+              },
+              "responseTime": "3599ms"
+          }

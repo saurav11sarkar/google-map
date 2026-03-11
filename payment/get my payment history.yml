@@ -1,0 +1,135 @@
+info:
+  name: get my payment history
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/payment/my?status=completed"
+  params:
+    - name: searchTerm
+      value: subscription
+      type: query
+      disabled: true
+    - name: status
+      value: completed
+      type: query
+      disabled: true
+    - name: currency
+      value: usd
+      type: query
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "1"
+      type: query
+      disabled: true
+    - name: sortBy
+      value: amount
+      type: query
+      disabled: true
+    - name: sortOrder
+      value: desc
+      type: query
+      disabled: true
+    - name: status
+      value: completed
+      type: query
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTgwYmY5YTY4YTA0YWQ5YTVkM2NlZiIsImVtYWlsIjoidmVuZG9yQGdtYWlsLmNvbSIsInJvbGUiOiJ2ZW5kb3IiLCJpYXQiOjE3NzMwMjgxMzEsImV4cCI6MTc3MzYzMjkzMX0.7J0CBquUlMIfwzQSTmLprGVodKV4sS4re0p89SvMkvg
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get my payment history
+    request:
+      url: "{{base_url}}/payment/my"
+      method: GET
+      params:
+        - name: searchTerm
+          value: subscription
+          type: query
+          disabled: true
+        - name: status
+          value: completed
+          type: query
+          disabled: true
+        - name: currency
+          value: usd
+          type: query
+          disabled: true
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: limit
+          value: "1"
+          type: query
+          disabled: true
+        - name: sortBy
+          value: amount
+          type: query
+          disabled: true
+        - name: sortOrder
+          value: desc
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "568"
+        - name: ETag
+          value: W/"238-x9C6u5StrvletBHx1/GlLaOa+o8"
+        - name: Date
+          value: Fri, 20 Feb 2026 08:26:56 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "All payments retrieved successfully",
+              "meta": {
+                  "page": 1,
+                  "limit": 1,
+                  "total": 2
+              },
+              "data": [
+                  {
+                      "_id": "69980d27e0f41770108c5b05",
+                      "user": "69980bf9a68a04ad9a5d3cef",
+                      "subscriber": "6997f278228f1caf69bb712f",
+                      "amount": 2500,
+                      "stripeSessionId": "cs_test_a1lXZJi8zvG4qprkD76kvFe9fFtFErq1XIU4Tj2Mj6h4FQ0jnDpsIbJQkI",
+                      "paymentType": "subscription",
+                      "currency": "usd",
+                      "status": "completed",
+                      "createdAt": "2026-02-20T07:28:39.065Z",
+                      "updatedAt": "2026-02-20T07:29:08.174Z",
+                      "__v": 0,
+                      "stripePaymentIntentId": "pi_3T2o99GcSUcKVQJq0fuP32Z7"
+                  }
+              ],
+              "responseTime": "106ms"
+          }

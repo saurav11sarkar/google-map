@@ -1,0 +1,61 @@
+info:
+  name: add bookmark
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/bookmark/69a5284e98b0908cb6ade7e5"
+  auth:
+    type: bearer
+    token: "{{user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: add bookmark
+    request:
+      url: "{{base_url}}/bookmark/6999213dc00a49167cbd735c"
+      method: POST
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "298"
+        - name: ETag
+          value: W/"12a-aynglO0u7bOAAUn7sLsQpzDsWM4"
+        - name: Date
+          value: Sat, 21 Feb 2026 08:45:35 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 201,
+              "success": true,
+              "message": "Bookmark created successfully",
+              "data": {
+                  "property": "6999213dc00a49167cbd735c",
+                  "user": "6996bf4a405cc1a8c458a35f",
+                  "_id": "699970af1bf71f57f5dc4c36",
+                  "createdAt": "2026-02-21T08:45:35.832Z",
+                  "updatedAt": "2026-02-21T08:45:35.832Z",
+                  "__v": 0
+              },
+              "responseTime": "262ms"
+          }

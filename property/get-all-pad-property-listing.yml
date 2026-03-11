@@ -1,0 +1,180 @@
+info:
+  name: get-all-pad-property-listing
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{base_url}}/property/get-all-pad-property-listing"
+  params:
+    - name: searchTerm
+      value: Apartment
+      type: query
+      disabled: true
+    - name: listingType
+      value: For Sale
+      type: query
+      disabled: true
+    - name: location
+      value: Gulshan, Dhaka
+      type: query
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "1"
+      type: query
+      disabled: true
+    - name: sortBy
+      value: price
+      type: query
+      disabled: true
+    - name: sortOrder
+      value: asc
+      type: query
+      disabled: true
+    - name: propertyType
+      value: Penthouse
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get-all-pad-property-listing
+    request:
+      url: "{{base_url}}/property/get-all-pad-property-listing"
+      method: GET
+      params:
+        - name: searchTerm
+          value: Apartment
+          type: query
+          disabled: true
+        - name: listingType
+          value: For Sale
+          type: query
+          disabled: true
+        - name: location
+          value: Gulshan, Dhaka
+          type: query
+          disabled: true
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: limit
+          value: "1"
+          type: query
+          disabled: true
+        - name: sortBy
+          value: price
+          type: query
+          disabled: true
+        - name: sortOrder
+          value: asc
+          type: query
+          disabled: true
+        - name: propertyType
+          value: Penthouse
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1673"
+        - name: ETag
+          value: W/"689-yv7tI5b5FYXyXfBwDWWPnw57XAw"
+        - name: Date
+          value: Mon, 09 Mar 2026 04:07:34 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "All property retrieved successfully",
+              "meta": {
+                  "page": 1,
+                  "limit": 10,
+                  "total": 1
+              },
+              "data": [
+                  {
+                      "_id": "69a5245c98b0908cb6ade7d7",
+                      "title": "Modern 2-Bedroom Apartment in Nairobi",
+                      "listingType": "For Rent",
+                      "propertyType": "Apartment",
+                      "bedrooms": 2,
+                      "bathrooms": 1,
+                      "area": 90,
+                      "description": "A modern apartment in central Nairobi with easy access to shops and transport.",
+                      "propertyCommunityAmenities": [],
+                      "location": "Nairobi, Kenya",
+                      "lat": -1.2890006,
+                      "lng": 36.8172812,
+                      "price": 1300,
+                      "images": [
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1772430428/healthcare_app/yim4humva9op60kbgms5.png",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1772430428/healthcare_app/ayuknc02rntoqtsvtpjh.png"
+                      ],
+                      "originalPrice": 270000,
+                      "status": "approved",
+                      "createBy": {
+                          "verifiedForget": false,
+                          "_id": "6996c048405cc1a8c458a36b",
+                          "firstName": "Agent",
+                          "lastName": "Sarkar",
+                          "email": "agent@gmail.com",
+                          "role": "agent",
+                          "createdAt": "2026-02-19T07:48:24.052Z",
+                          "updatedAt": "2026-03-09T03:24:20.497Z",
+                          "__v": 0,
+                          "status": "active",
+                          "isSubscribed": true,
+                          "subscribers": "6997f278228f1caf69bb712f",
+                          "subscriptionEndDate": "2026-03-09T05:21:50.004Z",
+                          "address": "Dhaka Bangladesh",
+                          "bio": "I am a property buyer. My name is sourov sarkar.",
+                          "gender": "male",
+                          "lat": 23.804093,
+                          "lng": 90.4152376,
+                          "location": "Dhaka",
+                          "phoneNumber": "01700000000",
+                          "postCode": "1207",
+                          "profileImage": "https://res.cloudinary.com/dlpdumtua/image/upload/v1772980642/healthcare_app/vzda4yiauojmtmkycuwb.avif"
+                      },
+                      "listingUser": [
+                          "6996bf4a405cc1a8c458a35f",
+                          "6996bf4a405cc1a8c458a35f",
+                          "6996bf4a405cc1a8c458a35f"
+                      ],
+                      "bookmarkUser": [],
+                      "createdAt": "2026-03-02T05:47:08.885Z",
+                      "updatedAt": "2026-03-08T11:25:07.228Z",
+                      "__v": 3
+                  }
+              ],
+              "responseTime": "205ms"
+          }

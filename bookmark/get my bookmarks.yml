@@ -1,0 +1,277 @@
+info:
+  name: get my bookmarks
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/bookmark"
+  params:
+    - name: searchTerm
+      value: For Rent
+      type: query
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "1"
+      type: query
+      disabled: true
+    - name: sortBy
+      value: user
+      type: query
+      disabled: true
+    - name: sortOrder
+      value: desc
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get my bookmarks
+    request:
+      url: "{{base_url}}/bookmark"
+      method: GET
+      params:
+        - name: searchTerm
+          value: For Rent
+          type: query
+          disabled: true
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: limit
+          value: "1"
+          type: query
+          disabled: true
+        - name: sortBy
+          value: user
+          type: query
+          disabled: true
+        - name: sortOrder
+          value: desc
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "844"
+        - name: ETag
+          value: W/"34c-ZY3LRwR8+BWfm7Fv64181oAxzME"
+        - name: Date
+          value: Sat, 21 Feb 2026 09:12:01 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Bookmark fetched successfully",
+              "meta": {
+                  "total": 1,
+                  "limit": 10,
+                  "page": 1
+              },
+              "data": [
+                  {
+                      "_id": "699970af1bf71f57f5dc4c36",
+                      "property": {
+                          "_id": "6999213dc00a49167cbd735c",
+                          "title": "Cozy Studio Apartment",
+                          "listingType": "For Rent",
+                          "location": "Dhanmondi, Dhaka",
+                          "price": 22000,
+                          "images": [
+                              "https://res.cloudinary.com/dlpdumtua/image/upload/v1771643195/healthcare_app/nma0fyofdvtrxu9lxffd.jpg",
+                              "https://res.cloudinary.com/dlpdumtua/image/upload/v1771643196/healthcare_app/b1tf3fhdi6arv64impdy.jpg",
+                              "https://res.cloudinary.com/dlpdumtua/image/upload/v1771643195/healthcare_app/iptskfctjdbykaczwqpd.jpg"
+                          ],
+                          "createBy": {
+                              "_id": "69980bf9a68a04ad9a5d3cef",
+                              "email": "vendor@gmail.com"
+                          }
+                      },
+                      "user": "6996bf4a405cc1a8c458a35f",
+                      "createdAt": "2026-02-21T08:45:35.832Z",
+                      "updatedAt": "2026-02-21T08:45:35.832Z",
+                      "__v": 0
+                  }
+              ],
+              "responseTime": "275ms"
+          }
+  - name: get my bookmarks
+    request:
+      url: "{{base_url}}/bookmark"
+      method: GET
+      params:
+        - name: searchTerm
+          value: For Rent
+          type: query
+          disabled: true
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: limit
+          value: "1"
+          type: query
+          disabled: true
+        - name: sortBy
+          value: user
+          type: query
+          disabled: true
+        - name: sortOrder
+          value: desc
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "2366"
+        - name: ETag
+          value: W/"93e-CJoh7CEQiEvSXfuoib5DSOsWfwA"
+        - name: Date
+          value: Mon, 09 Mar 2026 04:15:38 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Bookmark fetched successfully",
+              "meta": {
+                  "total": 2,
+                  "limit": 10,
+                  "page": 1
+              },
+              "data": [
+                  {
+                      "_id": "69ae3d262111f71433676baa",
+                      "property": {
+                          "_id": "69ad1ee4f07fc8d15f02f9b1",
+                          "title": "Modern 3-Bedroom Apartment in Nairobi",
+                          "listingType": "For Sale",
+                          "propertyType": "Bungalow",
+                          "bedrooms": 4,
+                          "bathrooms": 3,
+                          "area": 220,
+                          "builtUp": 160,
+                          "plot": 200,
+                          "keyBathrooms": "Ensuite",
+                          "keyBedRooms": "Master + 2",
+                          "keyBuiltUp": 160,
+                          "keyKitchenType": "Open Plan",
+                          "keyParking": "2 Covered Spaces",
+                          "keyFinishes": "High-End Finish",
+                          "keyBalconyType": "Sea View Balcony",
+                          "keyStorage": "Walk-in Closet",
+                          "keyCoolingSystem": "Central AC",
+                          "keyMoveInStatus": "Ready",
+                          "description": "Spacious bungalow in a quiet neighborhood, perfect for families.",
+                          "propertyCommunityAmenities": [
+                              "Faith Based",
+                              "Pet-Friendly",
+                              "Concierge"
+                          ],
+                          "location": "Mombasa, Kenya",
+                          "lat": -4.0434771,
+                          "lng": 39.6682065,
+                          "price": 370000,
+                          "images": [
+                              "https://res.cloudinary.com/dlpdumtua/image/upload/v1772953314/healthcare_app/q1btpfsbgral2t1jsdp9.jpg",
+                              "https://res.cloudinary.com/dlpdumtua/image/upload/v1772953315/healthcare_app/slcxay1p7goa3fytxsya.jpg",
+                              "https://res.cloudinary.com/dlpdumtua/image/upload/v1772953314/healthcare_app/tnmnurmjpqs9uauzdnno.png"
+                          ],
+                          "purpose": "Investment",
+                          "referenceNumber": "PNTH-2026-001",
+                          "furnishing": "Fully Furnished",
+                          "addedOn": "2026-03-02",
+                          "originalPrice": 270000,
+                          "handoverDate": "2026-12-10T00:00:00.000Z",
+                          "status": "approved",
+                          "createBy": "69a5249198b0908cb6ade7da",
+                          "listingUser": [],
+                          "bookmarkUser": [
+                              "6996bf4a405cc1a8c458a35f"
+                          ],
+                          "createdAt": "2026-03-08T07:01:56.872Z",
+                          "updatedAt": "2026-03-09T03:23:18.929Z",
+                          "__v": 1
+                      },
+                      "user": {
+                          "isSubscribed": false,
+                          "_id": "6996bf4a405cc1a8c458a35f",
+                          "firstName": "User",
+                          "lastName": "Sarkar",
+                          "email": "user@gmail.com",
+                          "role": "user",
+                          "createdAt": "2026-02-19T07:44:10.838Z",
+                          "updatedAt": "2026-03-09T03:35:36.080Z",
+                          "__v": 0,
+                          "verifiedForget": false,
+                          "status": "block"
+                      },
+                      "createdAt": "2026-03-09T03:23:18.879Z",
+                      "updatedAt": "2026-03-09T03:23:18.879Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "69ab94fb0c81b6866b6fe14e",
+                      "property": null,
+                      "user": {
+                          "isSubscribed": false,
+                          "_id": "6996bf4a405cc1a8c458a35f",
+                          "firstName": "User",
+                          "lastName": "Sarkar",
+                          "email": "user@gmail.com",
+                          "role": "user",
+                          "createdAt": "2026-02-19T07:44:10.838Z",
+                          "updatedAt": "2026-03-09T03:35:36.080Z",
+                          "__v": 0,
+                          "verifiedForget": false,
+                          "status": "block"
+                      },
+                      "createdAt": "2026-03-07T03:01:15.246Z",
+                      "updatedAt": "2026-03-07T03:01:15.246Z",
+                      "__v": 0
+                  }
+              ],
+              "responseTime": "205ms"
+          }

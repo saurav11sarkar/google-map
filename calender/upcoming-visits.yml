@@ -1,0 +1,82 @@
+info:
+  name: upcoming-visits
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{base_url}}/calender/upcoming-visits"
+  auth:
+    type: bearer
+    token: "{{user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: upcoming-visits
+    request:
+      url: "{{base_url}}/calender/upcoming-visits"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "632"
+        - name: ETag
+          value: W/"278-vOR5WoBaFkkY5+Y6lghBEbOf6bc"
+        - name: Date
+          value: Mon, 09 Mar 2026 07:14:36 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Upcoming visits retrieved successfully",
+              "data": {
+                  "total": 1,
+                  "data": [
+                      {
+                          "_id": "69ae6f726c812e4733ada95e",
+                          "firstName": "Saurav",
+                          "lastName": "Sarkar",
+                          "email": "user@gmail.com",
+                          "moveInData": "2026-03-10T00:00:00.000Z",
+                          "phone": "+8801700000000",
+                          "status": "approved",
+                          "user": {
+                              "_id": "6996bf4a405cc1a8c458a35f",
+                              "firstName": "User",
+                              "lastName": "Sarkar",
+                              "email": "user@gmail.com"
+                          },
+                          "property": {
+                              "_id": "69a5245c98b0908cb6ade7d7",
+                              "title": "Vel pariatur Sit d",
+                              "location": "Veniam do ab error ",
+                              "price": 56
+                          },
+                          "createdAt": "2026-03-09T06:57:54.448Z",
+                          "updatedAt": "2026-03-09T07:14:10.055Z",
+                          "__v": 0
+                      }
+                  ]
+              },
+              "responseTime": "144ms"
+          }

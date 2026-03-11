@@ -1,0 +1,111 @@
+info:
+  name: create subscribe
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/subscriber/"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"Pro Annual\",\r
+
+      \  \"days\": 30,\r
+
+      \  \"price\": 10000,\r
+
+      \  \"features\": [\r
+
+      \    \"All premium features\",\r
+
+      \    \"Dedicated support\",\r
+
+      \    \"Early feature access\"\r
+
+      \  ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: create subscribe
+    request:
+      url: "{{base_url}}/subscriber/"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"name\": \"Basic Boost\",\r
+
+          \  \"days\": 7,\r
+
+          \  \"price\": 2500,\r
+
+          \  \"features\": [\r
+
+          \    \"Access to basic content\",\r
+
+          \    \"Email support\",\r
+
+          \    \"Limited downloads\"\r
+
+          \  ]\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "373"
+        - name: ETag
+          value: W/"175-HdyCgrdyBABNvVID4BpZfqFxoXM"
+        - name: Date
+          value: Fri, 20 Feb 2026 05:34:48 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 201,
+              "success": true,
+              "message": "Request successfully completed",
+              "data": {
+                  "name": "Basic Boost",
+                  "days": 7,
+                  "price": 2500,
+                  "features": [
+                      "Access to basic content",
+                      "Email support",
+                      "Limited downloads"
+                  ],
+                  "status": "active",
+                  "users": [],
+                  "_id": "6997f278228f1caf69bb712f",
+                  "createdAt": "2026-02-20T05:34:48.800Z",
+                  "updatedAt": "2026-02-20T05:34:48.800Z",
+                  "__v": 0
+              },
+              "responseTime": "84ms"
+          }

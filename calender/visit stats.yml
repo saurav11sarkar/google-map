@@ -1,0 +1,59 @@
+info:
+  name: visit stats
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{base_url}}/calender/visit-stats"
+  auth:
+    type: bearer
+    token: "{{user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: visit stats
+    request:
+      url: "{{base_url}}/calender/visit-stats"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "151"
+        - name: ETag
+          value: W/"97-9p2lIIyHJ7lvuFZkDpqYnkaiX3s"
+        - name: Date
+          value: Mon, 09 Mar 2026 07:34:21 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Visit stats retrieved",
+              "data": {
+                  "upcoming": 1,
+                  "completed": 0,
+                  "pending": 4,
+                  "cancelled": 0
+              },
+              "responseTime": "53ms"
+          }

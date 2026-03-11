@@ -1,0 +1,59 @@
+info:
+  name: get all payment-overview
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/payment/payment-overview"
+  auth:
+    type: bearer
+    token: "{{admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get all payment-overview
+    request:
+      url: "{{base_url}}/payment/payment-overview"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "210"
+        - name: ETag
+          value: W/"d2-pYrqFRkBEHUyUjGaL/bEwLeFr80"
+        - name: Date
+          value: Sat, 07 Mar 2026 06:39:51 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Payment management data retrieved successfully",
+              "data": {
+                  "totalTensations": 1,
+                  "totalFaildTencations": 0,
+                  "pendingAmount": 0,
+                  "completedAmount": 2500
+              },
+              "responseTime": "158ms"
+          }

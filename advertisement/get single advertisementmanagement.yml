@@ -1,0 +1,75 @@
+info:
+  name: get single advertisementmanagement
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/advertisement/69a548782073864614c39efe"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get single advertisementmanagement
+    request:
+      url: "{{base_url}}/advertisement/69a548782073864614c39efe"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "723"
+        - name: ETag
+          value: W/"2d3-QVSXiaaowY2bH5zs1PuZr2f/wo8"
+        - name: Date
+          value: Mon, 02 Mar 2026 09:13:44 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Advertisement retrieved successfully",
+              "data": {
+                  "_id": "69a548782073864614c39efe",
+                  "companyName": "Prime Homes Ltd",
+                  "advertisementType": "Video",
+                  "callToActionURL": "https://primehomes.com/view",
+                  "uploadMedia": "https://res.cloudinary.com/dlpdumtua/image/upload/v1772439673/healthcare_app/erbfxw3itsufxancqvon.png",
+                  "targetRegions": [
+                      "Nairobi",
+                      "Nakuru"
+                  ],
+                  "targetAudience": [
+                      "Buyers",
+                      "Families"
+                  ],
+                  "compaingBudget": 8000,
+                  "compaingDuration": "45 days",
+                  "startDate": "2026-05-01T00:00:00.000Z",
+                  "endDate": "2026-06-15T00:00:00.000Z",
+                  "paymentStatus": "Paid",
+                  "createdBy": "6997f2e191513e9ca871a85b",
+                  "createdAt": "2026-03-02T08:21:12.551Z",
+                  "updatedAt": "2026-03-02T08:21:12.551Z",
+                  "__v": 0
+              },
+              "responseTime": "51ms"
+          }

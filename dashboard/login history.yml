@@ -1,0 +1,138 @@
+info:
+  name: login history
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/loginhistory/"
+  params:
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "1"
+      type: query
+      disabled: true
+    - name: sortBy
+      value: role
+      type: query
+      disabled: true
+    - name: sortOrder
+      value: asc
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: login history
+    request:
+      url: "{{base_url}}/loginhistory/"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: limit
+          value: "1"
+          type: query
+          disabled: true
+        - name: sortBy
+          value: role
+          type: query
+          disabled: true
+        - name: sortOrder
+          value: asc
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1099"
+        - name: ETag
+          value: W/"44b-GNofL7GW9dj6JXwSUpypvPzgv7Q"
+        - name: Date
+          value: Sat, 07 Mar 2026 05:11:41 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Login history fetched successfully",
+              "meta": {
+                  "total": 2,
+                  "page": 1,
+                  "limit": 10
+              },
+              "data": [
+                  {
+                      "_id": "69abaef356fb0ac7a786e39e",
+                      "userId": {
+                          "verifiedForget": false,
+                          "isSubscribed": false,
+                          "_id": "69980bf9a68a04ad9a5d3cef",
+                          "firstName": "vendor",
+                          "lastName": "Sarkar",
+                          "email": "vendor@gmail.com",
+                          "role": "vendor",
+                          "createdAt": "2026-02-20T07:23:37.812Z",
+                          "updatedAt": "2026-03-07T05:09:42.394Z",
+                          "__v": 0,
+                          "status": "active"
+                      },
+                      "role": "vendor",
+                      "loginTime": "2026-03-07T04:52:03.983Z",
+                      "ipaddress": "127.0.0.1",
+                      "createdAt": "2026-03-07T04:52:03.983Z",
+                      "updatedAt": "2026-03-07T04:52:03.983Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "69abaedc56fb0ac7a786e39a",
+                      "userId": {
+                          "verifiedForget": false,
+                          "isSubscribed": false,
+                          "_id": "6997f2e191513e9ca871a85b",
+                          "firstName": "admin",
+                          "lastName": "Sarkar",
+                          "email": "admin@gmail.com",
+                          "role": "admin",
+                          "createdAt": "2026-02-20T05:36:33.736Z",
+                          "updatedAt": "2026-02-28T03:09:54.763Z",
+                          "__v": 0,
+                          "status": "active"
+                      },
+                      "role": "admin",
+                      "loginTime": "2026-03-07T04:51:40.005Z",
+                      "ipaddress": "127.0.0.1",
+                      "createdAt": "2026-03-07T04:51:40.008Z",
+                      "updatedAt": "2026-03-07T04:51:40.008Z",
+                      "__v": 0
+                  }
+              ],
+              "responseTime": "146ms"
+          }

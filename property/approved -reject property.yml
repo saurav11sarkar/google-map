@@ -1,0 +1,86 @@
+info:
+  name: approved /reject property
+  type: http
+  seq: 8
+
+http:
+  method: PUT
+  url: "{{base_url}}/property/status/69a5200298b0908cb6ade7d4"
+  body:
+    type: json
+    data: "{\r\n    \"status\":\"approved\"\r\n}"
+  auth:
+    type: bearer
+    token: "{{admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: approved /reject property
+    request:
+      url: "{{base_url}}/property/status/699721b1ba2663d5e8701a8f"
+      method: PUT
+      body:
+        type: json
+        data: "{\r\n    \"status\":\"approved\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "962"
+        - name: ETag
+          value: W/"3c2-Rlq63xr6VS0aOlwdSSSmlxEB7sQ"
+        - name: Date
+          value: Mon, 23 Feb 2026 14:55:30 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Property approved successfully",
+              "data": {
+                  "bookmarkUser": [],
+                  "_id": "699721b1ba2663d5e8701a8f",
+                  "title": "Luxury Sea View Apartment",
+                  "listingType": "For Sale",
+                  "propertyType": "Apartment",
+                  "bedrooms": 3,
+                  "bathrooms": 2,
+                  "area": 1450,
+                  "description": "A beautiful luxury apartment with sea view and modern facilities.",
+                  "propertyCommunityAmenities": [],
+                  "location": "Gulshan, Dhaka",
+                  "lat": 23.7921765,
+                  "lng": 90.4155528,
+                  "price": 1250000,
+                  "images": [
+                      "https://res.cloudinary.com/dlpdumtua/image/upload/v1771512242/healthcare_app/em7ryjtgficgnuecqxfk.jpg",
+                      "https://res.cloudinary.com/dlpdumtua/image/upload/v1771512242/healthcare_app/kxherqtv7axzx9oduwdt.jpg",
+                      "https://res.cloudinary.com/dlpdumtua/image/upload/v1771512243/healthcare_app/pdtdajlwclqya8cat0sw.jpg"
+                  ],
+                  "status": "approved",
+                  "createBy": "69948c9a80e0796b446ca323",
+                  "listingUser": [],
+                  "createdAt": "2026-02-19T14:44:01.497Z",
+                  "updatedAt": "2026-02-23T14:55:30.467Z",
+                  "__v": 0
+              },
+              "responseTime": "144ms"
+          }

@@ -1,0 +1,234 @@
+info:
+  name: my inquey
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{base_url}}/contact-property/my-inquiry"
+  body:
+    type: text
+    data: ""
+  auth:
+    type: bearer
+    token: "{{user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: my inquey
+    request:
+      url: "{{base_url}}/contact-property/my-inquiry"
+      method: GET
+      body:
+        type: text
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "4071"
+        - name: ETag
+          value: W/"fe7-DnPtZax78PrdBMWsUKxelUaAAHc"
+        - name: Date
+          value: Sun, 08 Mar 2026 12:02:07 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "user retrieved successfully",
+              "meta": {
+                  "page": 1,
+                  "limit": 10,
+                  "total": 4
+              },
+              "data": [
+                  {
+                      "_id": "69ad5c92f219dbcbc038abe5",
+                      "userId": {
+                          "_id": "6996bf4a405cc1a8c458a35f",
+                          "firstName": "User",
+                          "lastName": "Sarkar",
+                          "email": "user@gmail.com",
+                          "role": "user"
+                      },
+                      "propertyId": {
+                          "_id": "69a5245c98b0908cb6ade7d7",
+                          "title": "Modern 2-Bedroom Apartment in Nairobi",
+                          "location": "Nairobi, Kenya",
+                          "price": 1300,
+                          "images": [
+                              "https://res.cloudinary.com/dlpdumtua/image/upload/v1772430428/healthcare_app/yim4humva9op60kbgms5.png",
+                              "https://res.cloudinary.com/dlpdumtua/image/upload/v1772430428/healthcare_app/ayuknc02rntoqtsvtpjh.png"
+                          ],
+                          "status": "approved"
+                      },
+                      "propertyOwnerId": {
+                          "_id": "6996c048405cc1a8c458a36b",
+                          "firstName": "Agent",
+                          "lastName": "Sarkar",
+                          "email": "agent@gmail.com",
+                          "role": "agent",
+                          "profileImage": "https://res.cloudinary.com/dlpdumtua/image/upload/v1772949518/healthcare_app/bratxe8gxt54cy8ws6zd.jpg"
+                      },
+                      "status": "pending",
+                      "isClosed": false,
+                      "messages": [
+                          {
+                              "senderId": "6996bf4a405cc1a8c458a35f",
+                              "senderRole": "user",
+                              "message": "i need help"
+                          }
+                      ],
+                      "createdAt": "2026-03-08T11:25:06.914Z",
+                      "updatedAt": "2026-03-08T11:25:06.914Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "69ad4446f9766bb0ec738130",
+                      "userId": {
+                          "_id": "6996bf4a405cc1a8c458a35f",
+                          "firstName": "User",
+                          "lastName": "Sarkar",
+                          "email": "user@gmail.com",
+                          "role": "user"
+                      },
+                      "propertyId": {
+                          "_id": "69a5245c98b0908cb6ade7d7",
+                          "title": "Modern 2-Bedroom Apartment in Nairobi",
+                          "location": "Nairobi, Kenya",
+                          "price": 1300,
+                          "images": [
+                              "https://res.cloudinary.com/dlpdumtua/image/upload/v1772430428/healthcare_app/yim4humva9op60kbgms5.png",
+                              "https://res.cloudinary.com/dlpdumtua/image/upload/v1772430428/healthcare_app/ayuknc02rntoqtsvtpjh.png"
+                          ],
+                          "status": "approved"
+                      },
+                      "propertyOwnerId": {
+                          "_id": "6996c048405cc1a8c458a36b",
+                          "firstName": "Agent",
+                          "lastName": "Sarkar",
+                          "email": "agent@gmail.com",
+                          "role": "agent",
+                          "profileImage": "https://res.cloudinary.com/dlpdumtua/image/upload/v1772949518/healthcare_app/bratxe8gxt54cy8ws6zd.jpg"
+                      },
+                      "status": "pending",
+                      "isClosed": false,
+                      "messages": [
+                          {
+                              "senderId": "6996bf4a405cc1a8c458a35f",
+                              "senderRole": "user",
+                              "message": "I am interested in this property!!!!"
+                          }
+                      ],
+                      "createdAt": "2026-03-08T09:41:26.172Z",
+                      "updatedAt": "2026-03-08T09:41:26.172Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "69ad26201d797c79ea1cbe33",
+                      "userId": {
+                          "_id": "6996bf4a405cc1a8c458a35f",
+                          "firstName": "User",
+                          "lastName": "Sarkar",
+                          "email": "user@gmail.com",
+                          "role": "user"
+                      },
+                      "propertyId": {
+                          "_id": "69a5245c98b0908cb6ade7d7",
+                          "title": "Modern 2-Bedroom Apartment in Nairobi",
+                          "location": "Nairobi, Kenya",
+                          "price": 1300,
+                          "images": [
+                              "https://res.cloudinary.com/dlpdumtua/image/upload/v1772430428/healthcare_app/yim4humva9op60kbgms5.png",
+                              "https://res.cloudinary.com/dlpdumtua/image/upload/v1772430428/healthcare_app/ayuknc02rntoqtsvtpjh.png"
+                          ],
+                          "status": "approved"
+                      },
+                      "propertyOwnerId": {
+                          "_id": "6996c048405cc1a8c458a36b",
+                          "firstName": "Agent",
+                          "lastName": "Sarkar",
+                          "email": "agent@gmail.com",
+                          "role": "agent",
+                          "profileImage": "https://res.cloudinary.com/dlpdumtua/image/upload/v1772949518/healthcare_app/bratxe8gxt54cy8ws6zd.jpg"
+                      },
+                      "status": "responded",
+                      "isClosed": false,
+                      "messages": [
+                          {
+                              "senderId": "6996bf4a405cc1a8c458a35f",
+                              "senderRole": "user",
+                              "message": "I am interested in this property!!!!"
+                          },
+                          {
+                              "senderId": "6996c048405cc1a8c458a36b",
+                              "senderRole": "agent",
+                              "message": "Hello, thanks for contacting"
+                          }
+                      ],
+                      "createdAt": "2026-03-08T07:32:48.209Z",
+                      "updatedAt": "2026-03-08T09:29:27.626Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "699c15d1a1ec4de26debe6de",
+                      "userId": {
+                          "_id": "6996bf4a405cc1a8c458a35f",
+                          "firstName": "User",
+                          "lastName": "Sarkar",
+                          "email": "user@gmail.com",
+                          "role": "user"
+                      },
+                      "propertyId": null,
+                      "propertyOwnerId": {
+                          "_id": "69980bf9a68a04ad9a5d3cef",
+                          "firstName": "vendor",
+                          "lastName": "Sarkar",
+                          "email": "vendor@gmail.com",
+                          "role": "vendor"
+                      },
+                      "status": "responded",
+                      "isClosed": false,
+                      "messages": [
+                          {
+                              "senderId": "6996bf4a405cc1a8c458a35f",
+                              "senderRole": "user",
+                              "message": "I am interested in this property"
+                          },
+                          {
+                              "senderId": "69980bf9a68a04ad9a5d3cef",
+                              "senderRole": "vendor",
+                              "message": "Hello, thanks for contacting"
+                          },
+                          {
+                              "senderId": "6996bf4a405cc1a8c458a35f",
+                              "senderRole": "user",
+                              "message": "Hello, thanks for contacting"
+                          }
+                      ],
+                      "createdAt": "2026-02-23T08:54:41.572Z",
+                      "updatedAt": "2026-02-23T09:00:42.244Z",
+                      "__v": 0
+                  }
+              ],
+              "responseTime": "223ms"
+          }

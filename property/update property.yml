@@ -1,0 +1,192 @@
+info:
+  name: update property
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/property/699721b1ba2663d5e8701a8f"
+  body:
+    type: multipart-form
+    data:
+      - name: title
+        type: text
+        value: Modern 2-Bedroom Apartment in Nairobi
+      - name: listingType
+        type: text
+        value: For Sale
+      - name: propertyType
+        type: text
+        value: Bungalow
+      - name: bedrooms
+        type: text
+        value: "4"
+      - name: bathrooms
+        type: text
+        value: "3"
+      - name: area
+        type: text
+        value: "220"
+      - name: builtUp
+        type: text
+        value: "160"
+        disabled: true
+      - name: plot
+        type: text
+        value: "200"
+        disabled: true
+      - name: keyBathrooms
+        type: text
+        value: Ensuite
+        disabled: true
+      - name: keyBedRooms
+        type: text
+        value: Master + 2
+        disabled: true
+      - name: keyBuiltUp
+        type: text
+        value: "160"
+        disabled: true
+      - name: keyKitchenType
+        type: text
+        value: Open Plan
+        disabled: true
+      - name: keyParking
+        type: text
+        value: 2 Covered Spaces
+        disabled: true
+      - name: keyFinishes
+        type: text
+        value: High-End Finish
+        disabled: true
+      - name: keyBalconyType
+        type: text
+        value: Sea View Balcony
+        disabled: true
+      - name: keyStorage
+        type: text
+        value: Walk-in Closet
+        disabled: true
+      - name: keyCoolingSystem
+        type: text
+        value: Central AC
+        disabled: true
+      - name: keyMoveInStatus
+        type: text
+        value: Ready
+        disabled: true
+      - name: description
+        type: text
+        value: Spacious bungalow in a quiet neighborhood, perfect for families.
+      - name: propertyCommunityAmenities
+        type: text
+        value: Swimming Pool,Garden,24/7 Security
+        disabled: true
+      - name: location
+        type: text
+        value: Mombasa, Kenya
+      - name: originalPrice
+        type: text
+        value: "270000"
+        disabled: true
+      - name: purpose
+        type: text
+        value: Investment
+        disabled: true
+      - name: referenceNumber
+        type: text
+        value: PNTH-2026-001
+        disabled: true
+      - name: furnishing
+        type: text
+        value: Fully Furnished
+        disabled: true
+      - name: addedOn
+        type: text
+        value: 2026-03-02
+        disabled: true
+      - name: handoverDate
+        type: text
+        value: 2026-06-01T00:00:00.000Z
+        disabled: true
+      - name: status
+        type: text
+        value: pending
+        disabled: true
+      - name: price
+        type: text
+        value: "370000"
+  auth:
+    type: bearer
+    token: "{{agent}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: update property
+    request:
+      url: "{{base_url}}/property/699721b1ba2663d5e8701a8f"
+      method: PUT
+      body:
+        type: json
+        data: "{\r\n    \"bathrooms\": 2\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "942"
+        - name: ETag
+          value: W/"3ae-9NkGHZkVRJcYZh+T23slKvlZ0IQ"
+        - name: Date
+          value: Thu, 19 Feb 2026 16:11:21 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Property updated successfully",
+              "data": {
+                  "_id": "699721b1ba2663d5e8701a8f",
+                  "title": "Luxury Sea View Apartment",
+                  "listingType": "For Sale",
+                  "propertyType": "Apartment",
+                  "bedrooms": 3,
+                  "bathrooms": 2,
+                  "area": 1450,
+                  "description": "A beautiful luxury apartment with sea view and modern facilities.",
+                  "propertyCommunityAmenities": [],
+                  "location": "Gulshan, Dhaka",
+                  "lat": 23.7921765,
+                  "lng": 90.4155528,
+                  "price": 1250000,
+                  "images": [
+                      "https://res.cloudinary.com/dlpdumtua/image/upload/v1771512242/healthcare_app/em7ryjtgficgnuecqxfk.jpg",
+                      "https://res.cloudinary.com/dlpdumtua/image/upload/v1771512242/healthcare_app/kxherqtv7axzx9oduwdt.jpg",
+                      "https://res.cloudinary.com/dlpdumtua/image/upload/v1771512243/healthcare_app/pdtdajlwclqya8cat0sw.jpg"
+                  ],
+                  "status": "pending",
+                  "createBy": "69948c9a80e0796b446ca323",
+                  "listingUser": [],
+                  "createdAt": "2026-02-19T14:44:01.497Z",
+                  "updatedAt": "2026-02-19T16:11:20.980Z",
+                  "__v": 0
+              },
+              "responseTime": "179ms"
+          }

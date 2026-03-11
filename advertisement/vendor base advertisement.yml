@@ -1,0 +1,40 @@
+info:
+  name: vendor base advertisement
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{base_url}}/advertisement/vendor/69980bf9a68a04ad9a5d3cef"
+  params:
+    - name: searchTerm
+      value: Homes
+      type: query
+      disabled: true
+    - name: companyName
+      value: ABC Real Estate
+      type: query
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "1"
+      type: query
+      disabled: true
+    - name: sortBy
+      value: advertisementType
+      type: query
+      disabled: true
+    - name: sortOrder
+      value: asc
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,100 @@
+info:
+  name: get single lead
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/contact-property/lead/69ae4c9f80ac9a22c7c9a2e8"
+  body:
+    type: text
+    data: ""
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get single lead
+    request:
+      url: "{{base_url}}/contact-property/lead/69ad26201d797c79ea1cbe33"
+      method: GET
+      body:
+        type: text
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1132"
+        - name: ETag
+          value: W/"46c-QPqHkZ+P3sWikHaadZa/Dr2oLqg"
+        - name: Date
+          value: Sun, 08 Mar 2026 09:22:06 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Lead retrieved successfully",
+              "data": {
+                  "_id": "69ad26201d797c79ea1cbe33",
+                  "userId": {
+                      "_id": "6996bf4a405cc1a8c458a35f",
+                      "firstName": "User",
+                      "lastName": "Sarkar",
+                      "email": "user@gmail.com",
+                      "role": "user"
+                  },
+                  "propertyId": {
+                      "_id": "69a5245c98b0908cb6ade7d7",
+                      "title": "Modern 2-Bedroom Apartment in Nairobi",
+                      "location": "Nairobi, Kenya",
+                      "price": 1300,
+                      "images": [
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1772430428/healthcare_app/yim4humva9op60kbgms5.png",
+                          "https://res.cloudinary.com/dlpdumtua/image/upload/v1772430428/healthcare_app/ayuknc02rntoqtsvtpjh.png"
+                      ],
+                      "status": "approved"
+                  },
+                  "propertyOwnerId": {
+                      "_id": "6996c048405cc1a8c458a36b",
+                      "firstName": "Agent",
+                      "lastName": "Sarkar",
+                      "email": "agent@gmail.com",
+                      "role": "user",
+                      "profileImage": "https://res.cloudinary.com/dlpdumtua/image/upload/v1772949518/healthcare_app/bratxe8gxt54cy8ws6zd.jpg"
+                  },
+                  "status": "pending",
+                  "isClosed": false,
+                  "messages": [
+                      {
+                          "senderId": "6996bf4a405cc1a8c458a35f",
+                          "senderRole": "user",
+                          "message": "I am interested in this property!!!!"
+                      }
+                  ],
+                  "createdAt": "2026-03-08T07:32:48.209Z",
+                  "updatedAt": "2026-03-08T07:32:48.209Z",
+                  "__v": 0
+              },
+              "responseTime": "109ms"
+          }

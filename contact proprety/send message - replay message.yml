@@ -1,0 +1,74 @@
+info:
+  name: send message / replay message
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/contact-property/send-message"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"contactId\": \"69ae4c9f80ac9a22c7c9a2e8\",\r
+
+      \  \"message\": \"Hello, thanks for contacting\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{agent}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: send message / replay message
+    request:
+      url: "{{base_url}}/contact-property/send-message"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"contactId\": \"699c15d1a1ec4de26debe6de\",\r
+
+          \  \"message\": \"Hello, thanks for contacting\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "141"
+        - name: ETag
+          value: W/"8d-yPpRdKYKwqxrgj3k63D1+CtBpIc"
+        - name: Date
+          value: Mon, 23 Feb 2026 09:00:42 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "success": true,
+              "message": "Message sent successfully",
+              "data": {
+                  "message": "Message sent successfully"
+              },
+              "responseTime": "158ms"
+          }
